@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.full-height {
+  height: 100vh;
+}
+
+.flex.columm {
+  flex-direction: column;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+ul {
+  flex: 1;
+  overflow: auto;
+}
