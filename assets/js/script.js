@@ -42,7 +42,7 @@ function buildList() {
 
     editBtn.innerHTML = "Edit";
     editBtn.addEventListener('click', function() {
-      
+    
     });
 
     if(notes[i].important === true) {
