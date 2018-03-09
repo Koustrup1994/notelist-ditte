@@ -38,8 +38,12 @@ function buildList() {
   for(var i = 0; i < notes.length; i++) {
     var liElm = document.createElement('li');
     var pElm = document.createElement('p');
-    var delBtn = document.createElement('button');
-    var btnText = document.createTextNode('Edit');
+    var editBtn = document.createElement('button');
+
+    editBtn.innerHTML = "Edit";
+    editBtn.addEventListener('click', function() {
+      
+    });
 
     if(notes[i].important === true) {
       liElm.style.backgroundColor = 'deeppink';
@@ -54,16 +58,15 @@ function buildList() {
       var index = event.target.getAttribute('data-index')
       var notes = getLocal();
       console.log(notes[index]);
-      notes[index].text = "Changed";
+      notes[index].text = "changed";
       var inputTemp = document.querySelector('#noteText');
-      inputTemp.value = 'whatever';
+      inputTemp.value = "whatever";
       setLocal(notes);
       buildList();
     });
 
     liElm.appendChild(pElm);
-    liElm.appendChild(delBtn);
-    delBtn.appendChild(btnText);
+    liElm.appendChild(editBtn);
 
     if(notes[i].date !== '') {
       var pDateElm = document.createElement('p');
